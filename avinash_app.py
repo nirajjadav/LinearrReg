@@ -3,12 +3,6 @@ import pandas as pd
 import numpy as np
 import pickle
 
-clf = pickle.load(open("mymodel.pkl","rb"))
-
-def predict(data):
-    clf = pickle.load(open("mymodel.pkl","rb"))
-    return clf.predict(data)
-
 st.title("Advertising Spends Prediction using Machine Learning")
 st.markdown("This Model Identify total spends on advertising")
 
@@ -23,7 +17,12 @@ with col1:
 	st.text("NewsPaper")
 	newspaper = st.slider("Adver. Spends on NewsPaper", 1.0,10000.0,0.5)
 
+clf = pickle.load(open("mymodel.pkl","rb"))
 
+def predict(data):
+    clf = pickle.load(open("mymodel.pkl","rb"))
+    return clf.predict(data)
+	
 st.text('')
 if st.button("Seles Prediction "):
     result = clf.predict(np.array([[tv,rd,newspaper]]))
