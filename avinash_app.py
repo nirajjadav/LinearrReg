@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 
+
 # Load the model
 clf = pickle.load(open("mymodel.pkl","rb"))
 
@@ -31,4 +32,5 @@ if st.button("Seles Prediction "):
     result = clf.predict(np.array([[tv,rd,newspaper]]))
     st.text(result[0])
 
-st.markdown("Developed By Avinash Pawar at NIELIT Daman")
+
+st.markdown("Developed By students at NIELIT Daman")
