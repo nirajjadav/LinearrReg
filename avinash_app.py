@@ -21,7 +21,7 @@ clf = pickle.load(open("mymodel.pkl","rb"))
 
 def predict(data):
 	clf = pickle.load(open("mymodel.pkl","rb"))
-    return clf.predict(data)
+	return clf.predict(data)
 	
 st.text('')
 if st.button("Seles Prediction "):
