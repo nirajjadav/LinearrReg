@@ -20,7 +20,6 @@ with col1:
 clf = pickle.load(open("mymodel.pkl","rb"))
 
 def predict(data):
-	clf = pickle.load(open("mymodel.pkl","rb"))
 	return clf.predict(data)
 	
 st.text('')
