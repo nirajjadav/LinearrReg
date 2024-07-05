@@ -3,13 +3,11 @@ import pandas as pd
 import numpy as np
 import pickle
 
-# Load the model
 clf = pickle.load(open("mymodel.pkl","rb"))
 
 def predict(data):
     clf = pickle.load(open("mymodel.pkl","rb"))
     return clf.predict(data)
-
 
 st.title("Advertising Spends Prediction using Machine Learning")
 st.markdown("This Model Identify total spends on advertising")
